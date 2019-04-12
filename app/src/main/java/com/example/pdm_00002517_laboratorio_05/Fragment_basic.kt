@@ -33,6 +33,9 @@ class Fragment_basic: Fragment(){
         return inflater.inflate(R.layout.fragment_basic,container,false).apply {
             mtv_01.text=texto1
             mtv_02.text=texto2
+            action_change.setOnClickListener{
+                toolBox?.ClickListenerHandler(mtv_01)
+            }
         }
 
     }
